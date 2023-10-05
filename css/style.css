@@ -16,7 +16,7 @@ body {
 }
 
 input:focus {
-    border: none;
+    box-decoration-break: unset;
 }
 
 a {
@@ -87,6 +87,7 @@ a i:hover {color: rgb(255, 255, 255)}
     display: flex;
     justify-content: space-between;
     background-color: rgb(215, 212, 217);  
+    border: 0.6px solid rgb(151, 151, 151);  
 }
 
 .icons-header i {
@@ -145,13 +146,14 @@ a i:hover {color: rgb(255, 255, 255)}
     padding: .2rem .2rem;
     border: .5px solid lightgray;
     background-color: white;
+    
 }
 
 .btn-search input {
     width: 90%;
     border: none;
-    padding: .2rem 0;
-    text-align: center;
+    padding: .2rem .2rem;
+    text-align: left;
 }
 
 .search p {
@@ -280,6 +282,7 @@ a i:hover {color: rgb(255, 255, 255)}
 }
 
 .active p i:active {color:aliceblue}
+
 
 .footer-mex {
     display: flex;

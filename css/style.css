@@ -77,7 +77,6 @@ a i:hover {color: rgb(255, 255, 255)}
     width: calc(100% - 250px);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 
@@ -206,7 +205,6 @@ a i:hover {color: rgb(255, 255, 255)}
     padding-right: 0.6rem;
 }
 
-
 /* MESSAGES AREA */
 
 .chat-avatar {
@@ -241,10 +239,10 @@ a i:hover {color: rgb(255, 255, 255)}
     gap: 2rem;
 }
 
-.messages-disp-left {
-    width: 45%;
-    min-height: 100px;
-    margin-right: 3rem;
+.messages-disp-right {
+    min-width: 40%;
+    max-width: 60%;
+    margin-right: 2rem;
     align-self: flex-end;
     border-radius: 10px;
     background-color: rgb(122, 234, 107);
@@ -254,10 +252,10 @@ a i:hover {color: rgb(255, 255, 255)}
 
 }
 
-.messages-disp-right {
-    width: 45%;
-    min-height: 100px;
-    margin-left: 3rem;
+.messages-disp-left {
+    min-width: 40%;
+    max-width: 60%;
+    margin-left: 2rem;
     border-radius: 10px;
     background-color: rgb(196, 198, 196);
     display: flex;
@@ -265,18 +263,13 @@ a i:hover {color: rgb(255, 255, 255)}
     justify-content: center;
 }
 
-.texting-area footer {
-    width: 100%;
-    height: 50px;
-}
 
 .inside-mex {
-    width: 100%;
+    width: 95%;
     padding: .5rem;
 }
 
 .active {
-    width: 10%;
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -285,6 +278,7 @@ a i:hover {color: rgb(255, 255, 255)}
 
 .active p i:active {color:aliceblue}
 
+/* FOOTER */
 
 .footer-mex {
     display: flex;
@@ -293,6 +287,12 @@ a i:hover {color: rgb(255, 255, 255)}
     padding: 0 1rem;
     border: 1px solid rgb(202, 204, 205);
 }
+
+.texting-area footer {
+    width: 100%;
+    height: 50px;
+}
+
 
 .text-bar {
     width: 90%;
@@ -353,9 +353,8 @@ a i:hover {color: rgb(255, 255, 255)}
     }
     
     .messages-disp-left, .messages-disp-right {
-        width: 70%;
         margin: 0 1rem;
-    }
+    } 
 
 }
 

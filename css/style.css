@@ -37,7 +37,7 @@ a {
     color: gray;
 }
 
-a i:hover {color: rgb(255, 255, 255)}
+.icons-header i:hover {color: rgb(255, 255, 255)}
 /* WRAPPER AND CONTAINER */
 
 .wrapper-app {
@@ -185,6 +185,12 @@ a i:hover {color: rgb(255, 255, 255)}
     background-color: white;
 }
 
+
+.col:hover {
+    background-color:rgb(164, 163, 163);
+
+}
+
 .avatar, .img-header {
     width: 30%;
     padding-left: .5rem;
@@ -241,7 +247,7 @@ a i:hover {color: rgb(255, 255, 255)}
 
 .messages-disp-right {
     min-width: 40%;
-    max-width: 60%;
+    max-width: 55%;
     margin-right: 2rem;
     align-self: flex-end;
     border-radius: 10px;
@@ -249,18 +255,20 @@ a i:hover {color: rgb(255, 255, 255)}
     display: flex;
     padding: .55rem;
     justify-content: center;
+    position: relative;
 
 }
 
 .messages-disp-left {
     min-width: 40%;
-    max-width: 60%;
+    max-width: 55%;
     margin-left: 2rem;
     border-radius: 10px;
     background-color: rgb(196, 198, 196);
     display: flex;
     padding: .55rem;
     justify-content: center;
+    position: relative;
 }
 
 
@@ -276,7 +284,39 @@ a i:hover {color: rgb(255, 255, 255)}
     justify-content: space-between;
 }
 
-.active p i:active {color:aliceblue}
+
+.hiden {
+    min-height: 50px;
+    width: 200px;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 0.9rem;
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    display: none;
+    z-index: 1;
+}
+
+
+.hiden p {
+    margin-bottom: .6rem;
+    text-align: center;
+    border-radius: 2px;
+    padding: .2rem;
+}
+
+.hiden p:hover  {
+    background-color: rgb(189, 189, 189);
+    color: rgb(16, 16, 16);
+}
+
+.active .chevron:hover .hiden {
+   display: block;
+   
+}
+
 
 /* FOOTER */
 
@@ -295,7 +335,7 @@ a i:hover {color: rgb(255, 255, 255)}
 
 
 .text-bar {
-    width: 90%;
+    width: 85%;
     text-align: center;
 }
 .text-bar input {
@@ -306,6 +346,35 @@ a i:hover {color: rgb(255, 255, 255)}
     
 }
 
+.mic, .emoji{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    color: black;
+}
+
+.mic:active {
+    background-color: rgb(108, 108, 246);
+    color: white;
+    translate: all 1s;
+    animation: active 1s;
+
+}
+
+@keyframes active{
+    
+    50% {
+        transform: scale(.5);
+    }    
+
+    75% {
+        transform: scale(1.5);
+        background-color: rgb(144, 144, 253);
+    }
+}
 
 
 /* MEDIA QUERY 540 */
@@ -343,7 +412,7 @@ a i:hover {color: rgb(255, 255, 255)}
     }
 
   /* COMMON */
-    .text-preview, .icons-header, .notification, .search {
+    .text-preview, .icons-header, .notification, .search  {
         display: none;
     }
 
@@ -355,6 +424,12 @@ a i:hover {color: rgb(255, 255, 255)}
     .messages-disp-left, .messages-disp-right {
         margin: 0 1rem;
     } 
+
+    .mic, .emoji{
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+    }
 
 }
 
